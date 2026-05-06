@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitChat | Фитнес чат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="hero">
+            <h1>FitChat</h1>
+            <p>Фитнес чат | Трекинг активности | Паттерн Observer</p>
+        </div>
+
+        <div class="main">
+            <!-- ЛЕВАЯ ПАНЕЛЬ -->
+            <div class="tracking-panel">
+                <div class="user-card">
+                    <div class="user-name" id="userNameDisplay">FitUser</div>
+                    <div class="user-level" id="userLevel">Новичок</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-value" id="caloriesValue">0</div>
+                    <div class="stat-label">Калории (сегодня)</div>
+                    <div class="progress-bar"><div class="progress-fill" id="caloriesProgress" style="width: 0%"></div></div>
+                    <div class="stat-target">🎯 Цель: 2000 ккал</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💧</div>
+                    <div class="stat-value" id="waterValue">0</div>
+                    <div class="stat-label">Стаканы воды</div>
+                    <div class="stat-target">🎯 Цель: 8 стаканов</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">👣</div>
+                    <div class="stat-value" id="stepsValue">0</div>
+                    <div class="stat-label">Шаги</div>
+                    <div class="stat-target">🎯 Цель: 10 000 шагов</div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="fit-btn calorie" id="addCalorieBtn">➕ +100 ккал</button>
+                    <button class="fit-btn water" id="addWaterBtn">💧 +1 стакан</button>
+                    <button class="fit-btn steps" id="addStepsBtn">👣 +1000 шагов</button>
+                </div>
+            </div>
+
+            <!-- ЦЕНТР - ЧАТ -->
+            <div class="chat-panel">
+                <div class="chat-header">
+                    <h2>💬 Фитнес-чат</h2>
+                    <div>
+                        <button class="chat-btn" id="changeNameBtn">✏️ Сменить имя</button>
+                        <button class="chat-btn" id="clearChatBtn">🗑️ Очистить</button>
+                    </div>
+                </div>
+                <div class="messages" id="messages">
+                    <div class="system-message">💪 Добро пожаловать в FitChat!</div>
+                </div>
+                <div class="emoji-bar">
+                    <span class="emoji" data-emoji="💪">💪</span>
+                    <span class="emoji" data-emoji="🏋️">🏋️</span>
+                    <span class="emoji" data-emoji="🏃‍♀️">🏃‍♀️</span>
+                    <span class="emoji" data-emoji="🥗">🥗</span>
+                    <span class="emoji" data-emoji="💧">💧</span>
+                    <span class="emoji" data-emoji="🔥">🔥</span>
+                    <span class="emoji" data-emoji="🎯">🎯</span>
+                    <span class="emoji" data-emoji="😴">😴</span>
+                    <span class="emoji" data-emoji="❤️">❤️</span>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="messageInput" placeholder="Напишите сообщение..." autocomplete="off">
+                    <button id="sendBtn">📤 Отправить</button>
+                </div>
+            </div>
+
+            <!-- ПРАВАЯ ПАНЕЛЬ - СОВЕТЫ -->
+            <div class="tips-panel">
+                <div class="tip-card"><div class="tip-icon">💡</div><div class="tip-title">Совет дня</div><div class="tip-text">Пейте воду за 30 минут до еды!</div></div>
+                <div class="tip-card"><div class="tip-icon">🥗</div><div class="tip-title">Питание</div><div class="tip-text">Белок после тренировки помогает восстановлению!</div></div>
+                <div class="tip-card"><div class="tip-icon">🏃‍♀️</div><div class="tip-title">Активность</div><div class="tip-text">10 000 шагов в день — отличная цель!</div></div>
+                <div class="tip-card"><div class="tip-icon">😴</div><div class="tip-title">Восстановление</div><div class="tip-text">Спите 7-8 часов — мышцы растут во сне!</div></div>
+            </div>
+        </div>
+
+        <footer>
+            🏆 FitChat | Паттерн Observer | Node.js + WebSocket | Реальное время
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
