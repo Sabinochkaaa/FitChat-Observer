@@ -1,6 +1,7 @@
 FitChat – Fitness Chat with WebSocket
 
-![FitChat Screenshot](screenshot.png)
+![FitChat Screenshot]<img width="976" height="452" alt="screenshot" src="https://github.com/user-attachments/assets/7083d540-b728-4e24-aba3-888c24686cd7" />
+
 
 Real-time chat with calorie, water, and step tracking. Built with Node.js + Socket.io using the Observer pattern.
 
